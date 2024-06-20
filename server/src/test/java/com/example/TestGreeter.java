@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,9 +20,9 @@ public class TestGreeter {
 
   @Test
   public void greetShouldIncludeTheOneBeingGreeted() {
-    String someone = "Word";
+    String someone = "World";
 
-    assertThat(greeter.greet(someone), containsString(someone));
+    Assert.assertEquals(greeter.greet(someone), containsString(someone));
   }
 
   @Test
